@@ -1,0 +1,30 @@
+{
+  "name": "devkit-ai",
+  "version": "1.0.0",
+  "description": "Generate AI assistant configuration files (skills, hooks, agents, TASK.md) for any software project across Claude Code, Copilot, Gemini, and Cursor.",
+  "author": {
+    "name": "Fatih Bulut"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/fatih-bulut/devkit-ai",
+  "repository": "https://github.com/fatih-bulut/devkit-ai",
+  "keywords": ["ai-config", "skills", "hooks", "agents", "task-management", "devkit"],
+  "userConfig": {
+    "enable_planner": {
+      "description": "Generate planner agent for target project (default: yes)",
+      "sensitive": false
+    },
+    "enable_implementer": {
+      "description": "Generate implementer agent for target project (default: yes)",
+      "sensitive": false
+    },
+    "enable_reviewer": {
+      "description": "Generate reviewer agent for target project (default: yes)",
+      "sensitive": false
+    },
+    "enable_debugger": {
+      "description": "Generate debugger agent for target project (default: yes)",
+      "sensitive": false
+    }
+  }
+}
