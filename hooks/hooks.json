@@ -2,11 +2,11 @@
   "hooks": {
     "UserPromptSubmit": [
       {
-        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "python ${CLAUDE_PLUGIN_ROOT}/scripts/user_prompt_submit.py"
+            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/scripts/user_prompt_submit.py",
+            "timeout": 10
           }
         ]
       }

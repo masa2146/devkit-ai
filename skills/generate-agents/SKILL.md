@@ -8,9 +8,9 @@ description: Use when generating agent definition files for a target project acr
 Hedef proje icin agent tanim dosyalarini olusturur.
 Olusturmadan once `${CLAUDE_PLUGIN_ROOT}/references/agent-templates/` altindaki dosyalari ve `${CLAUDE_PLUGIN_ROOT}/references/best-practices.md`'yi oku.
 
-## Pre-Check: userConfig
+## Pre-Check
 
-Before generating agents, check userConfig values: ${user_config.enable_planner}, ${user_config.enable_implementer}, ${user_config.enable_reviewer}, ${user_config.enable_debugger}. Skip disabled agents.
+Kullaniciya hangi agent'lari olusturmak istedigini sor. Varsayilan olarak 4 core agent olusturulur (planner, implementer, reviewer, debugger). Kullanici istemedigini belirtirse atla.
 
 ## Agent Naming Convention
 

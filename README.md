@@ -1,27 +1,27 @@
 # devkit-ai
 
-AI assistant configuration generator plugin for Claude Code and GitHub Copilot.
+AI assistant configuration generator plugin for Claude Code.
 
 Generate CLAUDE.md, GEMINI.md, Copilot instructions, .cursorrules, skills, hooks, agents, and TASK.md for any software project — with a single command.
 
 ## Installation
 
-### Claude Code
+### Local Development (Test)
 
 ```bash
-# From marketplace:
-claude marketplace add <marketplace-url>
-claude plugin install devkit-ai
-
-# Local development:
 claude --plugin-dir ./devkit-ai
 ```
 
-### GitHub Copilot
+### From a Marketplace
+
+If this plugin is published to a marketplace repository, install with:
 
 ```bash
-copilot plugin install ./devkit-ai
+# Add the marketplace (one-time)
+/plugin install devkit-ai@<marketplace-name>
 ```
+
+Or use the `/plugin` Discover tab inside Claude Code.
 
 ## Usage
 
@@ -44,17 +44,6 @@ After installing the plugin, use the namespaced skill:
 /devkit-ai:generate-config /Users/me/projects/existing-app
 ```
 
-## User Configuration
-
-When enabling the plugin, you can configure which agents to generate:
-
-| Config | Description | Default |
-|--------|-------------|---------|
-| `enable_planner` | Generate planner agent (feature decomposition) | yes |
-| `enable_implementer` | Generate implementer agent (code + tests) | yes |
-| `enable_reviewer` | Generate reviewer agent (code review) | yes |
-| `enable_debugger` | Generate debugger agent (systematic debug) | yes |
-
 ## What Gets Generated
 
 For a React + FastAPI + PostgreSQL web-app with auth and API features:
@@ -73,10 +62,8 @@ target-project/
 │   └── agents/                   # 4 agent definitions
 │
 ├── .github/
-│   ├── copilot-instructions.md
-│   ├── instructions/             # Task-specific instructions
-│   ├── skills/                   # Copilot skills
-│   └── hooks/                    # Copilot hooks
+│   ├── copilot-instructions.md   # Workspace instructions
+│   └── instructions/             # Task-specific instructions
 │
 ├── .agent/skills/                # Gemini skills
 │
@@ -91,8 +78,8 @@ target-project/
 | Platform | Outputs |
 |----------|---------|
 | **Claude Code** | CLAUDE.md, .claude/skills/, .claude/hooks/, .claude/agents/ |
-| **Gemini / Antigravity** | GEMINI.md, .agent/skills/ |
-| **GitHub Copilot** | .github/copilot-instructions.md, .github/instructions/, .github/skills/, *.agent.md |
+| **Gemini** | GEMINI.md, .agent/skills/ |
+| **GitHub Copilot** | .github/copilot-instructions.md, .github/instructions/, *.agent.md |
 | **Cursor** | .cursorrules |
 
 ## Skills Generated
@@ -133,17 +120,8 @@ devkit-ai/
 ├── hooks/hooks.json              # Hook configuration
 ├── scripts/                      # Hook scripts
 ├── references/                   # Templates and best practices
-├── settings.json                 # Default permissions
 └── docs/                         # Developer documentation
 ```
-
-## Migration from Clone-based Usage
-
-If you were using devkit-ai by cloning the repo and running `claude .`:
-
-1. Install as a plugin instead (see Installation above)
-2. Use `/devkit-ai:generate-config` instead of manual prompts
-3. All functionality is preserved — skills, hooks, agents, references
 
 ## License
 

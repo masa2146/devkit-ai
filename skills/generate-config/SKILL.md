@@ -8,16 +8,6 @@ description: Use when the user wants to generate AI assistant configuration file
 Bu skill, bir hedef proje icin tum AI asistan yapilandirma dosyalarini olusturur.
 Deterministik calisir - asagidaki checklist'i adim adim takip et, HICBIR ADIMI ATLAMA.
 
-## Plugin Config
-
-Bu skill devkit-ai plugin'i icinden calisir. Kullanici tercihleri:
-- `${user_config.enable_planner}`: Planner agent olusturulsun mu
-- `${user_config.enable_implementer}`: Implementer agent olusturulsun mu
-- `${user_config.enable_reviewer}`: Reviewer agent olusturulsun mu
-- `${user_config.enable_debugger}`: Debugger agent olusturulsun mu
-
-Disable edilen agent'lari atlayarak devam et.
-
 ## CHECKLIST (TodoWrite ile izle)
 
 ```
@@ -78,7 +68,7 @@ Sadece Claude Code hooks (Copilot hook desteklemiyor).
 
 `/devkit-ai:generate-agents` skill'ini calistir.
 
-userConfig'e gore agent'lari olustur veya atla.
+Kullaniciya hangi agent'lari istedigini sor, istemedigini atlayarak devam et.
 Multi-platform output: .claude/agents/, *.agent.md
 
 ## Adim 7: TASK.md
