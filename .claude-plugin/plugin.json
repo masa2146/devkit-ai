@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "keywords": ["ai", "devkit", "config-generator", "claude-code", "copilot", "gemini", "cursor"],
-  "skills": ["skills/"],
-  "agents": "agents/",
-  "hooks": "hooks/hooks.json"
+  "skills": ["./skills/"],
+  "agents": "./agents/",
+  "hooks": "./hooks/hooks.json"
 }
