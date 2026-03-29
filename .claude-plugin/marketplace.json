@@ -1,0 +1,19 @@
+{
+  "name": "devkit-ai",
+  "owner": {
+    "name": "Fatih Bulut"
+  },
+  "metadata": {
+    "description": "Generate AI assistant configuration files (skills, hooks, agents, TASK.md) for any software project across Claude Code, Copilot, Gemini, and Cursor."
+  },
+  "plugins": [
+    {
+      "name": "devkit-ai",
+      "source": "./",
+      "description": "Generate AI assistant configuration files (skills, hooks, agents, TASK.md) for any software project across Claude Code, Copilot, Gemini, and Cursor.",
+      "author": {
+        "name": "Fatih Bulut"
+      }
+    }
+  ]
+}
